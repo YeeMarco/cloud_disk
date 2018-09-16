@@ -8,7 +8,7 @@ process.title = 'NODE_WEB';
 http.createServer((req,res)=>{ 
   route(req,res)
   // console.log(response++)
-}).listen(8888,'127.0.0.1',()=>{console.log('server is runing at localhost:8888','pid-->',process.pid)})
+}).listen(8001,'0.0.0.0',()=>{console.log('server is runing at localhost:8001','pid-->',process.pid)})
 
 
  function route(req,res){
