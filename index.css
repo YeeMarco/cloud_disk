@@ -1,0 +1,375 @@
+@font-face{
+  font-family: 'Shrikhand';
+  src: url("./src/font/Shrikhand/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url("./src/font/iconfont/iconfont.ttf") /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+.iconfont{
+  font-family:iconfont !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.name{
+  font-family: 'Shrikhand';
+  font-size: 20px;
+  vertical-align: baseline;
+  margin-right: 20px;
+}
+.name::first-letter{
+  color:red;
+  font-size: 30px;
+  vertical-align: baseline;
+ }
+
+body{
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  background-color: #F3F1ED;
+}
+#loading {
+  z-index: 99;
+  height: 100vw;
+  width: 100vw;
+  background-size:contain;
+  background-image: linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
+}
+#loading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+#loading .str{
+  font-size: 50px;
+  font-family: 'Shrikhand';
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+
+.spacebetween{
+  display: flex;
+  padding: 0 10%;
+  justify-content: space-between;
+}
+.header{
+  height: 80px;
+  background-color: #fff;
+}
+.contentbar{
+  height: 60px;
+  /* background-color: #F3F1ED; */
+  border-bottom: 2px solid #EDEAE6; 
+}
+.button{
+  background-color: #fff;
+  border: 1px solid #E2E2E2;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 30px;
+  display: inline-block;
+  padding:0 10px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+.one{
+  border: 1px solid #FED223;
+  border-right: none;
+  border-radius: 2px 0 0 2px ;
+  box-shadow: 2px 0px #FED223 inset,0px 2px #FED223 inset,0px -2px #FED223 inset;
+  z-index: 99;
+}
+
+.searchcontainer{
+  position: relative;
+}
+.one,.two,.three,.four{
+  float: left;
+}
+.one{
+  width: 50px;
+  position: absolute;
+  left: 0px;
+}
+.two{
+  position: absolute;
+  left: 70px;
+}
+.three input
+{
+  padding-left: 90px;
+  outline: none;
+  width: 220px;
+  border-radius: 4px 0 0 4px;
+}
+.four{
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+  padding: 0 25px;
+}
+.triangle{
+  border-radius: 0;
+  width: 0;
+  padding: 0 0px;
+  height: 0;
+  border: 15px solid rgba(255, 255, 255, .2);
+  border-right: 0px solid rgba(255, 255, 255, .2);
+  border-left: 20px solid #FED223;
+  top: 1px;
+  z-index: 20;
+}
+.triangle::before{
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -25px;
+  width: 0;
+  height: 0;
+  border: 15px solid rgba(255, 255, 255, .2);
+  border-left: 20px solid #fff;
+  z-index: 21;
+}
+
+.upload{
+  background-color: #FED223;
+}
+.search{
+ 
+}
+.avtar, .search{
+  display: flex;
+  align-items:center;
+}
+.avtar div {
+  margin: 0 10px;
+}
+.avtar img{
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  
+}
+
+.directorybar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 25px;
+}
+.directorybar div{
+ 
+}
+
+.direct {font-size:16px;color: blue; text-decoration:none;} 
+.direct :link {color: blue; text-decoration:none;}
+ /* //未访问：蓝色、无下划线  */
+.direct:active{color: red; } 
+/* //激活：红色  */
+.direct:visited {color:purple;text-decoration:none;} 
+/* //已访问：purple、无下划线  */
+.direct:hover {color: red; text-decoration:underline;} 
+/* //鼠标移近：红色、下划线  */
+.directorybar .icon{
+  font-size: 20px;
+}
+.selected {
+  color: #b0aaaa;
+}
+
+
+.contenttable {
+  /* background-color: #F3F1EE; */
+  display: flex;
+  padding: 0 10%;
+  flex-wrap: wrap ;
+  /* justify-content: center; */
+  /* align-content:start; */
+  
+}
+.contenttable .odd,.contenttable .double {
+  position: relative;
+}
+.contenttable .checkbox {
+  position: absolute;
+  left: 20px;
+  top: 20px;  
+}
+.contenttable .item {
+  height: 200px;
+  width: 200px;
+  margin: 10px 10px;
+}
+
+.contenttable .graphics{
+
+  text-align: center;
+  font-size: 140px;
+}
+.contenttable .filename{
+  text-align: center;
+}
+ .pic {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+.contentlist {
+  padding: 20px 10%;
+}
+
+.contentlist .checkbox {
+  position: absolute;
+  left:  30px;
+  top: 0px;
+  line-height: 40px;
+}
+.contentlist .odd{
+ background-color: #e8deb14d;
+ position: relative;
+}
+.contentlist .double{
+  background-color: #fff;
+  position: relative;
+}
+.contentlist .item  div{
+  line-height: 40px;
+  margin: 0  0  0 150px;
+  
+}
+.contentlist .item{
+  display: flex;
+  height: 40px;
+  font-size: 18px;
+  
+}
+
+ .contenttable .checkedbox ,.contentlist .checkedbox{
+  color: rgb(255, 214, 88)
+}
+
+.contenttable .uncheckedbox ,.contentlist .uncheckedbox{
+  color: #ffdd557a;
+}
+
+
+
+.footer {
+  
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between; 
+  
+  bottom: 0px;
+}
+.footer div {
+  line-height: 30px;
+}
+.footleft{
+  background-color: #FFDD55;
+  width: 65%;
+  display: flex;
+}
+.footright{
+  text-align: center;
+  background-color: #fff;
+  width: 35%;
+  font-size: 14px;
+  color: #b0aaaa;
+  line-height:30px ;
+}
+
+.rect {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.rect{
+  margin: 0 20px;
+  color: #fff;
+  font-size: 20px;
+}
+.tri{
+  border: 15px solid #fff;
+  border-left: 20px solid #FFDD55;
+}
+  .floder{
+    color: rgb(255, 214, 88);
+  }
+  .jpg{
+    text-align:center;
+    color:rgb(255, 102, 104);
+  
+  }
+  .zip{
+    text-align:center;
+    color:rgb(253, 141, 89);
+   
+  }
+  .mp3{
+    text-align:center;
+    color:rgb(0, 190, 202);
+   
+  }
+  .txt{
+    text-align:center;
+    color:rgb(145, 167, 185);
+   
+  }
+  .mp4{
+    text-align:center;
+    color:rgb(130, 131, 242);
+    
+  }
+  .pdf{
+    text-align:center;
+    color:rgb(255, 91, 90);
+  }
+  .unkown{
+    color:rgb(205, 205, 205)
+  }
+
+  .pop{
+    height: 100vh;
+    width: 100vw;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    
+  }
+  .popchild{
+   max-width: 70%;
+   max-height: 70%;
+   border:1px solid #000;
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   text-align: center;
+  }
+  .close{
+    color: #fff;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    left: 50%;
+    bottom: 50px;
+    border: 2px solid #fff;
+    line-height: 30px;
+    text-align: center;
+    transform: translateX(-50%)
+  }

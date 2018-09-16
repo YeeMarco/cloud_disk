@@ -1,0 +1,12 @@
+{
+  "name": "yunpan",
+  "version": "1.0.0",
+  "description": "cloud disk for youself",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor server.js"
+  },
+  "author": "xmy",
+  "license": "ISC"
+}
